@@ -19,11 +19,6 @@ body {
   padding: 20px;
 }
 
-.app__right {
-  flex: 0.1;
-  background: blue;
-}
-
 .app__header {
   display: flex;
   align-items: center;

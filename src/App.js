@@ -1,15 +1,15 @@
-import { Card, CardContent, FormControl, MenuItem, Select, Table } from '@material-ui/core';
+import { Card, CardContent, FormControl, MenuItem, Select } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import InfoBox from './InfoBox';
 import Map from './Map';
-
+import Table from './Table';
 
 function App() {
   const [countries,setCountries] = useState([]);
   const [country ,setCountry] = useState('worldwide');
   const [countryInfo,setCountryInfo] = useState({});
-
+  const [tableData,setTableData] = useState([]);
 
   useEffect(()=>{
     fetch('https://disease.sh/v3/covid-19/all')
@@ -29,6 +29,7 @@ function App() {
             name: country.country,
             value: country.countryInfo.iso2,
           }));
+          setTableData(data);
           setCountries(countries);
         });
     };
