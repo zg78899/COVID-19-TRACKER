@@ -19,6 +19,11 @@ body {
   margin-bottom: 20px;
 }
 
+.app__header>h1 {
+  color: #cc1034;
+  font-size: 2rem;
+}
+
 .app__dropdown {
   background-color: white;
 }
@@ -28,6 +33,29 @@ body {
   padding: 20px;
 }
 
+.app__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__right .MuiCardContent-root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.app__right h3 {
+  text-align: center !important;
+}
+
+.app__graphTitle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.app__graph {
+  flex-grow: 1;
+}
 
 .app__stats {
   display: flex;
