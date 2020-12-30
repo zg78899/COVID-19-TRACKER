@@ -5,10 +5,11 @@ import InfoBox from './InfoBox';
 import LineGraph from './LineGraph';
 import Map from './Map';
 import Table from './Table';
-import { dotStat, prettyPrintStat, sortData } from './util';
+import { dotStat,  sortData } from './util';
 import "leaflet/dist/leaflet.css";
-import numeral from 'numeral';
-
+import {Coronavirus} from '@styled-icons/material/Coronavirus'
+import {World} from  '@styled-icons/boxicons-regular/World';
+import {News} from '@styled-icons/boxicons-regular/News';
 
 function App() {
   const [countries,setCountries] = useState([]);
@@ -72,15 +73,18 @@ function App() {
     
    }
 
-   console.log('CountryInfo',countryInfo);
-
-  
+  //  console.log('CountryInfo',countryInfo);
 
   return (
     <div className="app">
     <div className="app__left">
       <div className="app__header">
-      <h1>Covid-19 Tracker</h1>
+      
+      <h1>
+      <Coronavirus className="virus"/>
+      Covid-19 Tracker
+      <Coronavirus className="virus"/>
+      </h1>
        <FormControl className="app__dropdown">
          <Select
          onChange={onCountryChange}
@@ -130,10 +134,16 @@ function App() {
 
       <Card className="app__right">
         <CardContent>
-          <h3>Live Cases by Country</h3>
-              <Table countries={tableData}/>
-              <h3 className="app__graphTitle">Worldwide new {casesType}</h3>
-              <LineGraph 
+          <h3>
+            <World className="world"/>
+            Live Cases by Country
+          </h3>
+          <Table countries={tableData}/>
+          <h3 className="app__graphTitle">
+            <News className="new"/>
+            Worldwide new {casesType}
+            </h3>
+          <LineGraph 
               className="app__graph"
               casesType={casesType} />
               {/* Graph */}

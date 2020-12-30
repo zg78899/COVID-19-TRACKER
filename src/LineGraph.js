@@ -85,7 +85,7 @@ function LineGraph({casesType = 'cases',...props}) {
     .then(response=>response.json())
     .then((data)=>{
         let chartData = buildChartData(data,casesType);
-        console.log(chartData);
+        // console.log(chartData);
         setData(chartData);
     })
     }

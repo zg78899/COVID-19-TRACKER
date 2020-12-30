@@ -5,11 +5,15 @@ import { dotStat } from './util';
 function Table({countries}) {
   return (
     <div className="table">
-      {countries.map(({country,cases})=>(
+      {countries.map((country)=>(
         <tr>
-          <td>{country}</td>
+          <td >
+          <img src={country.countryInfo.flag} alt="country-flag"/>
+            {country.country}
+           {/* {console.log('Info',country)} */}
+          </td>
           <td>
-            <strong>{dotStat(cases)}</strong>
+            <strong>{dotStat(country.cases)}</strong>
           </td>
         </tr>
       ))}
