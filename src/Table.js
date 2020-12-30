@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Table.css";
+import numeral from 'numeral';
+import { dotStat } from './util';
 
 function Table({countries}) {
   return (
@@ -8,7 +10,7 @@ function Table({countries}) {
         <tr>
           <td>{country}</td>
           <td>
-            <strong>{cases}</strong>
+            <strong>{dotStat(cases)}</strong>
           </td>
         </tr>
       ))}

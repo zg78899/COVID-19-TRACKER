@@ -12,19 +12,22 @@ body {
   padding: 20px;
 }
 
-
-.app__left {
-  flex: 0.9;
-  background-color: yellow;
-  padding: 20px;
-}
-
 .app__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
 }
+
+.app__dropdown {
+  background-color: white;
+}
+
+.app__left {
+  flex: 0.9;
+  padding: 20px;
+}
+
 
 .app__stats {
   display: flex;
