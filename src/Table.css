@@ -25,3 +25,7 @@
 .table tr:nth-of-type(odd) {
   background-color: #f3f2f8;
 }
+
+.table-container {
+  width: 100%;
+}

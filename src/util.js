@@ -1,6 +1,7 @@
 import {Circle, Popup} from 'react-leaflet';
 import numeral from 'numeral';
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
 const casesTypeColors = {
   cases:{
@@ -35,6 +36,7 @@ export const dotStat = stat =>stat ? numeral(stat).format("0,0") : '0';
 export const showDataOnMap = (data,casesType = 'cases')=>(
   data.map(country =>(
     <Circle
+    key={uuidv4()}
     center={[country.countryInfo.lat, country.countryInfo.long]}
     color={casesTypeColors[casesType].hex}
     fillColor={casesTypeColors[casesType].hex}

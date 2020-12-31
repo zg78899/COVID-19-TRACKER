@@ -10,6 +10,7 @@ import "leaflet/dist/leaflet.css";
 import {Coronavirus} from '@styled-icons/material/Coronavirus'
 import {World} from  '@styled-icons/boxicons-regular/World';
 import {News} from '@styled-icons/boxicons-regular/News';
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
   const [countries,setCountries] = useState([]);
@@ -94,6 +95,7 @@ function App() {
            <MenuItem value="worldwide">WorldWide</MenuItem>
            {countries.map((country)=>(
              <MenuItem
+              key={uuidv4()}
               value={country.value} >
                 {country.name}</MenuItem>
            ))}

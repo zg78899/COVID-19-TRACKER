@@ -13,6 +13,10 @@
 
 }
 
+.infoBox-title {
+  text-overflow: ellipsis;
+}
+
 .infoBox__cases {
   color: #cc1034;
   font-weight: 600;
